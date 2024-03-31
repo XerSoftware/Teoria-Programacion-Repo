@@ -11,6 +11,7 @@ public class MainManager : MonoBehaviour
 
     private int m_Dificultad;
     private string m_NombreCelula;
+    private bool m_GameOver = false;
 
     public Color celulaColor;
     public int dificultad
