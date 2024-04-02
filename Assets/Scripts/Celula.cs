@@ -18,9 +18,11 @@ public class Celula : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float vertical = Input.GetAxis("Vertical");
         float input = Input.GetAxis("Horizontal");
         Vector3 currentPos = transform.position;
         currentPos.x += input * Time.deltaTime * m_Speed;
+        currentPos.y += vertical * Time.deltaTime * m_Speed;
         transform.position = currentPos;
     }
 
@@ -35,10 +37,30 @@ public class Celula : MonoBehaviour
         //}
         if (other.gameObject.CompareTag("virus"))
         {
-            m_Render.material.color = Color.green;
-            salud -= 1;
-            Debug.Log("Salud:" + salud.ToString());
-            Destroy(other);
+            //Destroy(other);
+        }
+        
+    }
+    public void Colorizar(Color nuevoColor)
+    {
+        m_Render.material.color = nuevoColor;
+    }
+
+    public void Dañar(int dimensionDaño)
+    {
+        salud -= dimensionDaño;
+        Debug.Log("Salud:" + salud.ToString());
+        if (salud < 20)
+        {
+            MainManager.Instance.GameOver();
+        }    
+    }
+
+    public void Sanar(int dimensionSanar)
+    {
+        if (salud < 100)
+        {
+            salud += dimensionSanar;
         }
         
     }

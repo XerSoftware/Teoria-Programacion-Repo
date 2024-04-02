@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MainManager : MonoBehaviour
@@ -59,6 +60,12 @@ public class MainManager : MonoBehaviour
         Instance = this;
         //Evitamos destruir objecto singleton al carga una nueva escena. Este sobrevivirá a las multiples escenas
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void GameOver()
+    {
+        m_GameOver = true;
+        SceneManager.LoadScene(0);
     }
 
 }
