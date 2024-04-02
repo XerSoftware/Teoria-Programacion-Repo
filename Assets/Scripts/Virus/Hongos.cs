@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//Herencia
+//HERENCIA: Hongos hereda de Virus y se inicializa con su propios parámetros
 public class Hongos : Virus
 {
     // Constructor de la clase derivada

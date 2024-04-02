@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// Herencia
+// HERENCIA
 public class Arqueas : Virus
 {
     public Arqueas() : base(50, Color.red, 3)

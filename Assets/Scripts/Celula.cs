@@ -64,4 +64,10 @@ public class Celula : MonoBehaviour
         }
         
     }
+
+    public void CambiarTamaño(float dimensionCelula)
+    {
+        Vector3 nuevoTamaño = new Vector3(dimensionCelula, dimensionCelula, dimensionCelula);
+        transform.localScale = nuevoTamaño;
+    }
 }

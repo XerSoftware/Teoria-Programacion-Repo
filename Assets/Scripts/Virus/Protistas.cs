@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// Herencia
+// HERENCIA
 public class Protistas : Virus
 {
     // Constructor de la clase derivada

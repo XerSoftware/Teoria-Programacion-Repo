@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// Herencia
+// HERENCIA
 public class Bacterias : Virus
 {
     // Constructor de la clase derivada
@@ -18,5 +18,17 @@ public class Bacterias : Virus
     void Update()
     {
         
+    }
+    // POLIMORFISMO: Por anulación de método
+    protected override void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("celula"))
+        {
+            Celula celula = other.GetComponent<Celula>();
+            celula.Colorizar(this.colorizacion);
+            celula.Dañar(this.daño);
+            celula.CambiarTamaño(4.0f);
+            gameObject.SetActive(false);
+        }
     }
 }

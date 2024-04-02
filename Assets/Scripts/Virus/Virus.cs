@@ -33,8 +33,8 @@ public class Virus : MonoBehaviour
     {
         daño = NuevoDaño;
     }
-
-    private void OnTriggerEnter(Collider other)
+    // ABSTRACCIÓN: Este método será utilizado por todas las variantes del virus.
+    protected virtual void OnTriggerEnter(Collider other)
     {
           if (other.gameObject.CompareTag("celula"))
         {
