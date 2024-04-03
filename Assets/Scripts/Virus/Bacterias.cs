@@ -19,7 +19,8 @@ public class Bacterias : Virus
     {
         
     }
-    // POLIMORFISMO: Por anulación de método
+    // POLYMORPHISM
+    // Por anulación de método
     protected override void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("celula"))

@@ -8,7 +8,8 @@ using UnityEngine.UIElements;
 public class MainManager : MonoBehaviour
 {
     public static MainManager Instance { get; private set; }
-    // ENCAPSULACIÓN: Utillización de propiedad con campo de respaldo 
+    // ENCAPSULATION
+    // Utillización de propiedad con campo de respaldo 
 
     private int m_Dificultad;
     private string m_NombreCelula;
